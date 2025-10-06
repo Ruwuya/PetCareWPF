@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PetCareWPF"
+        xmlns:local="clr-namespace:PetCareWPF" xmlns:viewmodels="clr-namespace:PetCareWPF.ViewModels"
         mc:Ignorable="d"
         Title="Pet Care Clinic" Height="720" Width="1280">
     <Grid>
@@ -12,6 +12,7 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <!-- Sidebar Navigation -->
         <StackPanel Grid.Column="0" Background="#2C3E50" Width="200">
             <Button Content="Home" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
             <Button Content="Pets" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
@@ -20,16 +21,33 @@
             <Button Content="Invoice" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
             <Button Content="Staff" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
             <Button Content="Treatments" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Medication" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
         </StackPanel>
+        <!-- Filter pane -->
         <StackPanel Grid.Column="1" Background="#ECF0F1" Width="200">
             <TextBlock Text="Filters" FontWeight="Bold" Margin="10"/>
             <CheckBox Content="Show Only Active Pets" Margin="10"/>
             <CheckBox Content="Show Only Upcoming Appointments" Margin="10"/>
             <CheckBox Content="Show Only Unpaid Invoices" Margin="10"/>
         </StackPanel>
+        <!-- Main dynamic content area -->
         <StackPanel Grid.Column="2" Background="White" Margin="10">
             <TextBlock Text="Welcome to Pet Care Clinic Management System" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
             <TextBlock Text="Select an option from the left menu to get started." FontSize="16"/>
+            <!-- Dynamic showing of content from the buttons -->
+            
+            <!-- Testing DataGrid for Appointments (to be replaced with dynamic content)
+            <StackPanel>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Pet Name" Binding="{Binding PetName}" Width="*"/>
+                        <DataGridTextColumn Header="Owner" Binding="{Binding OwnerName}" Width="*"/>
+                        <DataGridTextColumn Header="Appointment Date" Binding="{Binding AppointmentDate}" Width="*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            -->
         </StackPanel>
     </Grid>
 </Window>
