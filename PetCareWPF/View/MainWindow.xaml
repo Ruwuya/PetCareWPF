@@ -1,0 +1,35 @@
+﻿<Window x:Class="PetCareWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetCareWPF"
+        mc:Ignorable="d"
+        Title="Pet Care Clinic" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#2C3E50" Width="200">
+            <Button Content="Home" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Pets" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Customers" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Appointments" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Invoice" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Staff" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+            <Button Content="Treatments" Margin="10" Padding="10" Foreground="White" Background="#34495E" BorderBrush="Transparent"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Background="#ECF0F1" Width="200">
+            <TextBlock Text="Filters" FontWeight="Bold" Margin="10"/>
+            <CheckBox Content="Show Only Active Pets" Margin="10"/>
+            <CheckBox Content="Show Only Upcoming Appointments" Margin="10"/>
+            <CheckBox Content="Show Only Unpaid Invoices" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Background="White" Margin="10">
+            <TextBlock Text="Welcome to Pet Care Clinic Management System" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <TextBlock Text="Select an option from the left menu to get started." FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>
