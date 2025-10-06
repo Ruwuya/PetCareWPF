@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PetCareWPF.Views.UserControl
+namespace PetCareWPF.Views
 {
     /// <summary>
     /// Interaction logic for CustomersView.xaml

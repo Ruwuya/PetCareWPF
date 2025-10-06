@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetCareWPF.ViewModels
 {
-    internal class PetsViewModel
+    public class PetsViewModel
     {
     }
 }
